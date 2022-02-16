@@ -67,13 +67,11 @@ import axios from 'axios';
             <Text style = {Design.searchText}>Search</Text>
         </TouchableOpacity>
             <SafeAreaView style = {Design.Safe}>
-                {isLoading ? <ActivityIndicator/> : (
                     <FlatList
                         data={data}
                         keyExtractor={({ id }, index) => id}
                         renderItem={render}
                     />
-                )}
                 {show === 200 ?
                 <TouchableOpacity style = {Design.ShareTouch}>
                   <Text style ={Design.ShareText}>Share</Text>
